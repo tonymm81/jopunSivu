@@ -8,3 +8,6 @@ Small companys webpage
 
 ## version 101
 - added footer and header image and I also make some styles. Now we have to plan site includes and also plan how to show english content and finnish content
+
+## version 102
+- added some images to main page and now the main page has images in the page.Next work is add some images to contact us page and there we should make some form or only email contact.
