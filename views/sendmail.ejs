@@ -1,9 +1,23 @@
 <%- include("includes/header") %>
-       
-    <button href="/contact">Paina tästä ihan vaa huvin vuoksi</button>
-    <a href="/" class="mdl-button mdl-button--raised">takaisin pääsivulle</a>
-    
-    <ul class="mdl-list">
 
-   
-<%- include("includes/footer") %>
+    <div class="contact_us">
+        <a href="/" class="mdl-button mdl-button--raised">takaisin pääsivulle</a>
+        <h1>Ota yhteyttä</h1>
+        <form action="/send-email" method="POST"> 
+                <label for="name">Nimi:</label> 
+                    <input type="text" id="name"
+                    name="name" required> <br> 
+                    <label for="email">Sähköposti:</label> 
+                    <input type="email" id="email"
+                    name="email" required> <br> <label for="message">Viesti:</label> <textarea id="message" name="message"
+                    required></textarea> <br>
+            <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY">
+
+            </div> <br> 
+            <button type="submit">Lähetä</button>
+            </form>
+
+    </div>
+
+
+    <%- include("includes/footer") %>

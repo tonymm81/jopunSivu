@@ -11,3 +11,7 @@ Small companys webpage
 
 ## version 102
 - added some images to main page and now the main page has images in the page.Next work is add some images to contact us page and there we should make some form or only email contact.
+
+## version 104
+- Added node mailer contact form to contact us site. I also add in index page some text about machines and some description about start him self.
+- In index.ts we have to modify the node mailer and also make some style changes to site.

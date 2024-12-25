@@ -29,6 +29,13 @@
             font-size: 16pt;
             margin: 0;
         }
+        p{
+            font-size: 14pt;
+            text-align: left;
+        }
+        li{
+            font-size: 14pt;
+        }
 
         .mdl-list__item {
             height: 30px;
@@ -117,12 +124,9 @@
             flex-direction: row;
             background-color: aqua;
             margin:5px;
+            padding:5px;
         }
-        .buttons{
-            border: 2px solid black;
-            margin:3px;
-            border-radius: 2%;
-        }
+       
         .firstContent{
             width:100%;
             margin:5px;
@@ -147,7 +151,7 @@
         }
         .aboutMe{
             display: flex;
-            float: inline-start;
+            flex-direction: column;
             width:60%;
             order: 1; 
             align-self: flex-start; 
@@ -169,6 +173,7 @@
         }
         .devices{
             display: flex;
+            flex-direction: column;
             float: inline-start;
             width:60%;
             order: 2; 
@@ -208,6 +213,7 @@
         }
         .parts{
             display: flex;
+            flex-direction: column;
             float: inline-start;
             width:60%;
             order: 2; 
@@ -263,6 +269,11 @@
             align-self: flex-start; 
             height:100%;
             background-color: blueviolet;
+        }
+        .contact_us{
+            width:100%;
+            height:auto;
+            align-items: center;
         }
         
        
