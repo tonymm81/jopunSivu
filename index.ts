@@ -1,4 +1,5 @@
 import express from 'express';
+import path from 'path';
 
 
 const app : express.Application = express();
@@ -8,6 +9,8 @@ const app : express.Application = express();
 const portti : number =  3002;
 
 app.set("view engine", "ejs");
+
+app.use(express.static(path.resolve(__dirname, "public")));
 
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
