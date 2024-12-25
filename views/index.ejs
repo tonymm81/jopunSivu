@@ -2,12 +2,19 @@
        
     <div class="mainPageBlock">
         <div class="buttonDiv">
-            <a href="/contact" class="mdl-button mdl-button--raised" >ota yhteyttä</a>
-            <a href="/contact" class="mdl-button mdl-button--raised" >In Enlish</a>
+            
+            <% if (isEnglish) {%>
+            <a href="/set-language/fi" class="mdl-button mdl-button--raised buttons">In English</a>
+            <a href="/contact" class="mdl-button mdl-button--raised" >Ota yhteyttä</a>
+            <% } else { %>
+            <a href="/set-language/en" class="mdl-button mdl-button--raised buttons">Suomeksi</a>
+            <a href="/contact" class="mdl-button mdl-button--raised" >Contact us</a>
+            <% } %>
         </div>
             <div class="firstContent">
-                <div class="aboutMe">
-                    <h3>Tietoa minusta</h3>
+                <div class="aboutMe" >
+                    <% if (isEnglish) {%>
+                        <h3>Tietoa minusta</h3>
                         <p>Minulla on lähes 50 vuoden kokemus eletroniikan korjailusta ja rakentamisesta.
                             Brotherin brodeerauskoneita olen korjaillut jo useita vuosia eletroniikka puolelta.
                         <br>
@@ -16,12 +23,25 @@
                         Italiasta, Saksasta ja Hollannista. Testaan korjatut tuotteet huolellisesti,
                         ennenkö lähetän ne eteen päin.
                         </p>
+                        <% } else { %>
+                            <h3>About Me</h3> <p>I have nearly 50 years of experience in repairing and building electronics. 
+                                I have been repairing Brother embroidery machines for several years on the electronics side. 
+                                <br> <br> 
+                                I have also worked with clients from Italy, Germany, and the Netherlands. 
+                                I thoroughly test the repaired products before sending them forward. </p>
+                            <% } %>
                 </div>
                 <img src="/images/tyokalut.png" alt="information about me"/>
             </div>
             <div class="secondContent">
-                <div class="devices"><h3>laitteita, joita korjaillaan</h3>
+                <div class="devices">
+                    <% if (isEnglish) {%>
+                    <h3>laitteita, joita korjaillaan</h3>
                     <p>Brother Prodeerauskoneet</p>
+                    <% } else { %>
+                        <h3>Devices That Are Repaired</h3> 
+                        <p>Brother Embroidery Machines</p>
+                        <% } %>
                     <ul>
                         <li>bas-416</li>
                         <li>bes-1216</li>
@@ -35,11 +55,18 @@
                     <img src="/images/brodeeraus2.png" alt="Brother BE" class="brod2"/>
             </div>
             <div class="thirdContent">
-                <div class="parts"><h3>Varaosia on joihinkin malleihin</h3>
-                    <p>Minulta löytyy ohjauskortteja esimerkiksi BE-1204 ja BE-1206
+                <div class="parts">
+                    <% if (isEnglish) {%>
+                        <h3>Varaosia on joihinkin malleihin</h3>
+                        <p>Minulta löytyy ohjauskortteja esimerkiksi BE-1204 ja BE-1206
                         malleihin ja esimerkiksi ehjiä paneeleita ja muita kortteja löytyy muihinkin 
                         kone malleihin.
-                    </p>
+                        <% } else { %>
+                            <h3>Spare Parts for Some Models</h3> <p>I have control boards for models 
+                                such as BE-1204 and BE-1206, and 
+                                I also have intact panels and other boards for other machine models. 
+                            </p>    
+                    </p><% } %>
                 </div>
                 <img src="/images/sparepart1.png" alt="Brother part" class="sparePart1"/>
                 <img src="/images/sparepart2.png" alt="Brother parts" class="sparePart2"/>
@@ -50,8 +77,13 @@
             </div>
 
         <div class="buttonDiv">
-            <a href="/contact" class="mdl-button mdl-button--raised">ota yhteyttä</a>
-            <a href="/contact" class="mdl-button mdl-button--raised">In Enlish</a>
+            <% if (isEnglish) {%>
+                <a href="/set-language/fi" class="mdl-button mdl-button--raised buttons">In English</a>
+                <a href="/contact" class="mdl-button mdl-button--raised" >Ota yhteyttä</a>
+                <% } else { %>
+                <a href="/set-language/en" class="mdl-button mdl-button--raised buttons">Suomeksi</a>
+                <a href="/contact" class="mdl-button mdl-button--raised" >Contact us</a>
+                <% } %>
         </div>
 </div>
 <%- include("includes/footer") %>

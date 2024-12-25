@@ -15,3 +15,7 @@ Small companys webpage
 ## version 104
 - Added node mailer contact form to contact us site. I also add in index page some text about machines and some description about start him self.
 - In index.ts we have to modify the node mailer and also make some style changes to site.
+
+## version 105
+- I add the fin eng translate button to page. This how the user can change the site language.
+- there is also nodemailer and node fetch added on index.ts.  There is also added a route, where we handle the language change.

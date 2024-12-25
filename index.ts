@@ -9,6 +9,8 @@ const app : express.Application = express();
 
 const portti : number =  3002;
 
+let isEnglish = false;
+
 app.set("view engine", "ejs");
 
 app.use(express.static(path.resolve(__dirname, "public")));
@@ -36,17 +38,27 @@ app.post("/", async (req : express.Request, res : express.Response) => {
 app.get("/contact", async (req : express.Request, res : express.Response) => {
 
    console.log("tullaanko ohjaukseen")
-   res.render("sendmail");
+   res.render("sendmail", { isEnglish });
 
 });
 
+app.get("/", (req: express.Request, res: express.Response) => { 
+    res.render("index", { isEnglish }); 
 
-app.get("/", async (req : express.Request, res : express.Response) => {
+});
+
+/*app.get("/", async (req : express.Request, res : express.Response) => {
 
     
 
     res.render("index", { ostokset : "" });
 
+});*/
+
+app.get("/set-language/:lang", (req: express.Request, res: express.Response) => { 
+    const lang = req.params.lang; 
+    isEnglish = lang === "en";
+    res.redirect("/"); 
 });
 
 app.post("/send-email", async (req: express.Request, res: express.Response) => { 
@@ -61,7 +73,8 @@ app.post("/send-email", async (req: express.Request, res: express.Response) => {
         } 
         const transporter = nodemailer.createTransport({ service: 'gmail', auth: { user: 'your-email@gmail.com', pass: 'your-email-password'} }); 
         const mailOptions = { from: email, to: 'your-email@gmail.com', subject: `Yhteydenotto: ${name}`, text: message }; 
-        await transporter.sendMail(mailOptions); res.send("Sähköposti lähetetty onnistuneesti!"); 
+        await transporter.sendMail(mailOptions); 
+        res.send("Sähköposti lähetetty onnistuneesti!"); 
     } catch (error) { 
         console.error("Virhe sähköpostin lähetyksessä:", error); 
         res.send("Virhe sähköpostin lähetyksessä."); } 
