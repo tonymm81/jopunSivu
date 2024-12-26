@@ -3,8 +3,15 @@
     <div class="contact_us">
         <% if (isEnglish) {%>
         <a href="/" class="mdl-button mdl-button--raised">takaisin pääsivulle</a>
-        <h1>Ota yhteyttä</h1>
-        <p>Kysy lisää korjauksista ja muista osista niin autamme parhaan mukaan</p>
+        <h1>Ota yhteyttä</h1> 
+        <p><strong>HUOM!!</strong> Tälle sivulle emme tallenna henkilötietoja. 
+            Antamasi nimi ja sähköposti päätyvät henkilökohtaiseen sähköpostiosoitteeseeni. 
+            Ethän laita viestikenttään mitään arkaluontoista tietoa. 
+            Poistamme asiakkaan viestit, kun tapaus on ratkennut tai asiakkaan pyynnöstä, 
+            mutta kuitenkin viimeistään 3 kuukauden kuluttua.
+        </p> <br><br> 
+        <p>Kysy lisää korjauksista ja muista osista, niin autamme parhaan mukaan.</p> 
+        <p>Toki kaikkia tapauksia ei pystytä korjaamaan, mutta kysy rohkeasti lisää!</p>
         <form action="/send-email" method="POST"> 
             <label for="name">Nimi:</label> 
                 <input type="text" id="name"
@@ -15,7 +22,7 @@
                 <label for="message">Viesti:</label> 
                 <textarea id="message" name="message"
                 required></textarea> <br>
-        <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY">
+        <div class="g-recaptcha" data-sitekey=<%= sitekey %> required>
 
         </div> 
         <br> 
@@ -23,9 +30,16 @@
         </form>
         <% }else{ %>
             <a href="/" class="mdl-button mdl-button--raised">Back to Main Page</a> 
-            <h1>Contact Us</h1> 
-            <p>Ask more about repairs and other parts, and we will help you as best as we can.</p>
-        
+            <h1>Contact Us</h1> <p><strong>NOTE!!</strong> We do not store personal data on this page. 
+                The name and email you provide will be sent to my personal email address. 
+                Please do not include any sensitive information in the message field.
+                 We delete customer messages once the case is resolved or upon the customer's request,
+                  but no later than 3 months after.
+            </p> 
+            <br>
+            <br> 
+            <p>Ask more about repairs and other parts, and we will help you as best as we can.</p> 
+            <p>Of course, not all cases can be repaired, but feel free to ask for more information!</p>
         <form action="/send-email" method="POST"> 
                 <label for="name">Name:</label> 
                     <input type="text" id="name"
@@ -36,8 +50,8 @@
                     <label for="message">Message:</label> 
                     <textarea id="message" name="message"
                     required></textarea> <br>
-            <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY">
-
+            <div class="g-recaptcha" data-sitekey=<%= sitekey %> required>
+               
             </div> 
             <br> 
             <button type="submit">Send</button>

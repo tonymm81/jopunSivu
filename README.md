@@ -22,3 +22,7 @@ Small companys webpage
 
 ## version 106
 - I make the mobile view brakepoints to css. There will be some small issues to fix but now the site is usable in mobile view.
+
+## version 107
+- now the node mailer is working fine and the googles recaptcha is working fine. Lets continue this site developing later when we have published this site.
+- Next we have to buy a domain name and upcloud service to run the webpage.

@@ -2,58 +2,37 @@ import express from 'express';
 import path from 'path';
 import nodemailer from "nodemailer"; 
 const fetch = require("node-fetch");
+import dotenv from "dotenv";
+
 
 const app : express.Application = express();
 
+dotenv.config();
 
-
-const portti : number =  3002;
+const portti : number =  Number(process.env.SitePort) ;
 
 let isEnglish = false;
+let sitekey = process.env.googleCaptchaSiteKey
 
 app.set("view engine", "ejs");
-
 app.use(express.static(path.resolve(__dirname, "public")));
-
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
 
-app.post("/poista", async (req : express.Request, res : express.Response) => {
-
-   
-
-    res.redirect("/");
-
-});
-
-
-app.post("/", async (req : express.Request, res : express.Response) => {
-
-
-
-    res.render("index", { ostokset : "" });
-
-});
-
 app.get("/contact", async (req : express.Request, res : express.Response) => {
 
-   console.log("tullaanko ohjaukseen")
-   res.render("sendmail", { isEnglish });
+   
+   //let sitekey = "vitun paskaläjä"//process.env.googleCaptchaSiteKey
+   //console.log("tullaanko ohjaukseen", sitekey)
+   res.render("sendmail", { isEnglish, sitekey });
 
 });
 
 app.get("/", (req: express.Request, res: express.Response) => { 
-    res.render("index", { isEnglish }); 
+    
+    res.render("index", { isEnglish, sitekey }); 
 
 });
-
-/*app.get("/", async (req : express.Request, res : express.Response) => {
-
-    
-
-    res.render("index", { ostokset : "" });
-
-});*/
 
 app.get("/set-language/:lang", (req: express.Request, res: express.Response) => { 
     const lang = req.params.lang; 
@@ -63,21 +42,30 @@ app.get("/set-language/:lang", (req: express.Request, res: express.Response) => 
 
 app.post("/send-email", async (req: express.Request, res: express.Response) => { 
     const { name, email, message, "g-recaptcha-response": recaptchaResponse } = req.body; 
-    const secretKey = "YOUR_SECRET_KEY"; 
+    const secretKey = process.env.googleCaptchaServerkey; 
     const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${recaptchaResponse}`; 
     try { 
         const response = await fetch(verificationUrl, { method: "POST" }); 
         const data = await response.json(); 
-        if (!data) {
-            return res.send("reCAPTCHA vahvistus epäonnistui. Yritä uudelleen."); 
+        console.log("vastaus", data)
+        if (data.success === false) {
+            return res.render("vahvistus", { viesti: "reCAPTCHA vahvistus epäonnistui. Yritä uudelleen. Please do the i am not robot again "}); 
         } 
-        const transporter = nodemailer.createTransport({ service: 'gmail', auth: { user: 'your-email@gmail.com', pass: 'your-email-password'} }); 
-        const mailOptions = { from: email, to: 'your-email@gmail.com', subject: `Yhteydenotto: ${name}`, text: message }; 
+        console.log(process.env.Google_email, process.env.Google_Password)
+
+        const transporter = nodemailer.createTransport({  host: "smtp.gmail.com",
+            port: 465,
+            secure: true, 
+            auth: { user: process.env.Google_email, pass: process.env.Google_Password} }); 
+
+        const mailOptions = { from: email, to: process.env.hotmailAccount, 
+            subject: `Yhteydenotto: ${name}`, text: message }; 
+
         await transporter.sendMail(mailOptions); 
-        res.send("Sähköposti lähetetty onnistuneesti!"); 
+        res.render("vahvistus", {viesti: "Sähköposti lähetetty onnistuneesti! The mail is sended!"}); 
     } catch (error) { 
         console.error("Virhe sähköpostin lähetyksessä:", error); 
-        res.send("Virhe sähköpostin lähetyksessä."); } 
+        res.render("vahvistus", {viesti: "Virhe sähköpostin lähetyksessä. There happend an error in sending a message"}); } 
     
     });
 
