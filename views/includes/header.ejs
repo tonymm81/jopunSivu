@@ -20,18 +20,22 @@
 
         h1 {
             font-size: 20pt;
-            margin: 0;
+            margin: 5;
             max-width: 100%;
-            background-color: aqua;
+            background-color: rgb(218, 212, 212);
         }
 
         h2 {
             font-size: 16pt;
             margin: 0;
         }
+        h3{
+            margin:5px;
+        }
         p{
             font-size: 14pt;
             text-align: left;
+            margin:5px;
         }
         li{
             font-size: 14pt;
@@ -112,9 +116,9 @@
         .mainPageBlock {
             width: 100%;
             min-height:600px;
-            margin:5px;
+            margin:10px;
             padding: 25px;
-            background-color: antiquewhite;
+            background-color: rgb(218, 212, 212);
             display: flex;
             flex-direction: column;
         }
@@ -122,14 +126,15 @@
             align-items: center;
             display: flex;
             flex-direction: row;
-            background-color: aqua;
+            background-color: rgb(218, 212, 212);
             margin:5px;
             padding:5px;
         }
        
         .firstContent{
-            width:100%;
+            width:98%;
             margin:5px;
+            border: 1px solid black;
             padding:5px;
             height:465px;
             columns: 2;
@@ -137,7 +142,7 @@
             flex-direction: row;
             align-items:center;
             justify-content:space-around;
-            background-color: rgb(187, 187, 90);
+            background-color: rgb(218, 212, 212);
         }
         .firstContent img{ 
             
@@ -147,7 +152,7 @@
             width:40%;
             height:auto;
             margin:5px;
-            margin-right: 5px;
+            margin-top:20px;
         }
         .aboutMe{
             display: flex;
@@ -156,19 +161,21 @@
             order: 1; 
             align-self: flex-start; 
             height:100%;
-            background-color: blueviolet;
+            background-color: rgb(218, 212, 212);
         }
         .secondContent{
-            width:100%;
+            width:98%;
             margin:5px;
+            margin-top:20px;
             padding:5px;
             height:465px;
+            border: 1px solid black;
             columns: 3;
             display:flex;
             flex-direction: row;
             align-items:center;
             justify-content:space-around;
-            background-color: rgb(114, 114, 69);
+            background-color: rgb(218, 212, 212);
             
         }
         .devices{
@@ -179,7 +186,7 @@
             order: 2; 
             align-self:center; 
             height:100%;
-            background-color: blueviolet;
+            background-color: rgb(218, 212, 212);
         }
         .brod1{
             order: 1; 
@@ -200,8 +207,9 @@
             margin-right: 5px;
         }
         .thirdContent{
-            width:100%;
+            width:98;
             margin:5px;
+            margin-top:20px;
             padding:5px;
             height:465px;
             columns: 3;
@@ -209,7 +217,8 @@
             flex-direction: row;
             align-items:center;
             justify-content:space-around;
-            background-color: rgb(114, 114, 69);
+            border: 1px solid black;
+            background-color: rgb(218, 212, 212);
         }
         .parts{
             display: flex;
@@ -219,7 +228,7 @@
             order: 2; 
             align-self:center; 
             height:100%;
-            background-color: blueviolet;
+            background-color: rgb(218, 212, 212);
         }
         .sparePart1{
             order: 1; 
@@ -240,16 +249,18 @@
             margin-right: 5px;
         }
         .fourthContent{
-            width:100%;
+            width:98%;
             margin:5px;
             padding:5px;
+            margin-top:20px;
             height:665px;
             columns: 2;
             display:flex;
             flex-direction: row;
             align-items:center;
             justify-content:space-around;
-            background-color: rgb(187, 187, 90);
+            border: 1px solid black;
+            background-color: rgb(218, 212, 212);
         }
         .mahcine{ 
             
@@ -275,7 +286,136 @@
             height:auto;
             align-items: center;
         }
-        
+        @media (max-width: 800px) {
+            .mainPageBlock{
+                padding:15px;
+                margin:10px;
+            }
+            .firstContent{
+                padding:10px;
+                width:98%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                height:800px;
+                margin:5px;
+                
+            }
+            .firstContent img{ 
+                position: relative;
+                width:98%;
+                height:auto;
+                margin:5px;
+                
+            }
+            .aboutMe{
+                display: flex;
+                width:98%;
+                height:50%;
+                background-color: rgb(218, 212, 212);
+            }
+            .secondContent{
+                width:98%;
+                margin:5px;
+                margin-top:20px;
+                padding:5px;
+                height:1300px;
+                border: 1px solid black;
+                columns: 3;
+                display:flex;
+                flex-direction: column;
+                align-items:center;
+                justify-content:space-around;
+                background-color: rgb(218, 212, 212);
+                
+            }
+            .devices{
+                display: flex;
+                flex-direction: column;
+                
+                width:98%;
+                
+                align-self:center; 
+                height:100%;
+                background-color: rgb(218, 212, 212);
+            }
+            .brod1{
+                
+                max-width:100%;
+                width:98%;
+                height:auto;
+                margin:5px;
+                margin-right: 5px;
+            }
+            .brod2{
+               
+                max-width:100%;
+                width:98%;
+                height:auto;
+                margin:5px;
+                margin-right: 5px;
+            }
+            .thirdContent{
+                width:98%;
+                margin:5px;
+                margin-top:20px;
+                padding:5px;
+                height:1100px;
+                border: 1px solid black;
+                columns: 3;
+                display:flex;
+                flex-direction: column;
+                align-items:center;
+                justify-content:space-around;
+                background-color: rgb(218, 212, 212);
+            }
+            .parts{
+                display: flex;
+                flex-direction: column;
+                
+                width:98%;
+                
+                align-self:center; 
+                height:100%;
+                background-color: rgb(218, 212, 212);
+            }
+            .sparePart1{
+                max-width:100%;
+                width:98%;
+                height:auto;
+                margin:5px;
+                margin-right: 5px;
+            }
+            .sparePart2{
+                max-width:100%;
+                width:98%;
+                height:auto;
+                margin:5px;
+                margin-right: 5px;
+            }
+            .fourthContent{
+                padding:10px;
+                width:98%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                height:1300px;
+                margin:5px;
+            }
+            .mahcine{ 
+                
+                position: relative;
+                width:98%;
+                height:auto;
+                margin:5px;
+            }
+            .sparePart3{
+                position: relative;
+                width:98%;
+                height:auto;
+                margin:5px;
+            }
+        }
        
     </style>
     <title>Automaatio ja eletroniikka huolto Jouko Mäenpää</title>

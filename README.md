@@ -19,3 +19,6 @@ Small companys webpage
 ## version 105
 - I add the fin eng translate button to page. This how the user can change the site language.
 - there is also nodemailer and node fetch added on index.ts.  There is also added a route, where we handle the language change.
+
+## version 106
+- I make the mobile view brakepoints to css. There will be some small issues to fix but now the site is usable in mobile view.
