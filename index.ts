@@ -59,7 +59,7 @@ app.post("/send-email", async (req: express.Request, res: express.Response) => {
             auth: { user: process.env.Google_email, pass: process.env.Google_Password} }); 
 
         const mailOptions = { from: email, to: process.env.hotmailAccount, 
-            subject: `Yhteydenotto: ${name}`, text: message }; 
+            subject: `Yhteydenotto: ${name}`, text: ` viesti ${message} henkilöltä osoitteesta ${email}` }; 
 
         await transporter.sendMail(mailOptions); 
         res.render("vahvistus", {viesti: "Sähköposti lähetetty onnistuneesti! The mail is sended!"}); 
