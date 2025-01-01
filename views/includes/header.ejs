@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <style>
+        html {
+            font-size: 16px;
+            /* 1rem = 16px */
+        }
+
         body {
             background-color: #f0f0f0;
             /* Vaalean harmaa väri */
@@ -19,26 +24,24 @@
             /* Voit valita haluamasi fontin */
         }
 
-        h1 {
-            font-size: 20pt;
-            margin: 5;
-            max-width: 100%;
-            background-color: rgb(218, 212, 212);
-        }
+
 
         h2 {
             font-size: 16pt;
             margin: 0;
         }
-        h3{
-            margin:5px;
+
+        h3 {
+            margin: 5px;
         }
-        p{
+
+        p {
             font-size: 14pt;
             text-align: left;
-            margin:5px;
+            margin: 5px;
         }
-        li{
+
+        li {
             font-size: 14pt;
         }
 
@@ -82,8 +85,8 @@
 
         .HeaderImageDiv {
             position: relative;
-            text-align: center;
-            margin-top:10px;
+            width: 100%;
+            height: auto;
         }
 
         .HeaderImageDiv img {
@@ -97,10 +100,14 @@
             left: 50%;
             transform: translate(-50%, -50%);
             color: white;
-            /* Voit muuttaa värin tarpeen mukaan */
             background-color: rgba(0, 0, 0, 0.5);
-            /* Puoliksi läpinäkyvä tausta */
-            padding: 10px;
+            padding: 1rem;
+            /* Käytä rem-yksikköä */
+            font-size: 2rem;
+            /* Peruskoko */
+            text-align: center;
+            width: 80%;
+            /* Varmistaa, että teksti ei mene yli */
         }
 
         .footerImageDiv {
@@ -111,318 +118,407 @@
         .footerImageDiv img {
             width: 100%;
             height: auto;
-            margin-bottom : 10px;
+            margin-bottom: 10px;
         }
 
         .mainPageBlock {
             width: 100%;
-            min-height:600px;
-            margin:10px;
+            min-height: 600px;
+            margin: 10px;
             padding: 25px;
             background-color: rgb(218, 212, 212);
             display: flex;
             flex-direction: column;
         }
-        .buttonDiv{
+
+        .buttonDiv {
             align-items: center;
             display: flex;
             flex-direction: row;
             background-color: rgb(218, 212, 212);
-            margin:5px;
-            padding:5px;
+            margin: 5px;
+            padding: 5px;
         }
-       
-        .firstContent{
-            width:98%;
-            margin:5px;
+
+        .firstContent {
+            width: 98%;
+            margin: 5px;
             border: 1px solid black;
-            padding:5px;
-            height:465px;
+            padding: 5px;
+            height: 465px;
             columns: 2;
-            display:flex;
+            display: flex;
             flex-direction: row;
-            align-items:center;
-            justify-content:space-around;
+            align-items: center;
+            justify-content: space-around;
             background-color: rgb(218, 212, 212);
         }
-        .firstContent img{ 
-            
-            order: 2; 
+
+        .firstContent img {
+
+            order: 2;
             align-self: flex-end;
-            max-width:100%;
-            width:40%;
-            height:auto;
-            margin:5px;
-            margin-top:20px;
+            max-width: 100%;
+            width: 40%;
+            height: auto;
+            margin: 5px;
+            margin-top: 20px;
         }
-        .aboutMe{
+
+        .aboutMe {
             display: flex;
             flex-direction: column;
-            width:60%;
-            order: 1; 
-            align-self: flex-start; 
-            height:100%;
-            background-color: rgb(218, 212, 212);
-        }
-        .secondContent{
-            width:98%;
-            margin:5px;
-            margin-top:20px;
-            padding:5px;
-            height:465px;
-            border: 1px solid black;
-            columns: 3;
-            display:flex;
-            flex-direction: row;
-            align-items:center;
-            justify-content:space-around;
-            background-color: rgb(218, 212, 212);
-            
-        }
-        .devices{
-            display: flex;
-            flex-direction: column;
-            float: inline-start;
-            width:60%;
-            order: 2; 
-            align-self:center; 
-            height:100%;
-            background-color: rgb(218, 212, 212);
-        }
-        .brod1{
-            order: 1; 
-            align-self: flex-end;
-            max-width:100%;
-            width:40%;
-            height:auto;
-            margin:5px;
-            margin-right: 5px;
-        }
-        .brod2{
-            order: 3; 
-            align-self: flex-end;
-            max-width:100%;
-            width:40%;
-            height:auto;
-            margin:5px;
-            margin-right: 5px;
-        }
-        .thirdContent{
-            width:98;
-            margin:5px;
-            margin-top:20px;
-            padding:5px;
-            height:465px;
-            columns: 3;
-            display:flex;
-            flex-direction: row;
-            align-items:center;
-            justify-content:space-around;
-            border: 1px solid black;
-            background-color: rgb(218, 212, 212);
-        }
-        .parts{
-            display: flex;
-            flex-direction: column;
-            float: inline-start;
-            width:60%;
-            order: 2; 
-            align-self:center; 
-            height:100%;
-            background-color: rgb(218, 212, 212);
-        }
-        .sparePart1{
-            order: 1; 
+            width: 60%;
+            order: 1;
             align-self: flex-start;
-            max-width:100%;
-            width:40%;
-            height:auto;
-            margin:5px;
-            margin-right: 5px;
+            height: 100%;
+            background-color: rgb(218, 212, 212);
         }
-        .sparePart2{
-            order: 3; 
-            align-self: flex-end;
-            max-width:100%;
-            width:40%;
-            height:auto;
-            margin:5px;
-            margin-right: 5px;
-        }
-        .fourthContent{
-            width:98%;
-            margin:5px;
-            padding:5px;
-            margin-top:20px;
-            height:665px;
-            columns: 2;
-            display:flex;
+
+        .secondContent {
+            width: 98%;
+            margin: 5px;
+            margin-top: 20px;
+            padding: 5px;
+            height: 465px;
+            border: 1px solid black;
+            columns: 3;
+            display: flex;
             flex-direction: row;
-            align-items:center;
-            justify-content:space-around;
+            align-items: center;
+            justify-content: space-around;
+            background-color: rgb(218, 212, 212);
+
+        }
+
+        .devices {
+            display: flex;
+            flex-direction: column;
+            float: inline-start;
+            width: 60%;
+            order: 2;
+            align-self: center;
+            height: 100%;
+            background-color: rgb(218, 212, 212);
+        }
+
+        .brod1 {
+            order: 1;
+            align-self: flex-end;
+            max-width: 100%;
+            width: 40%;
+            height: auto;
+            margin: 5px;
+            margin-right: 5px;
+        }
+
+        .brod2 {
+            order: 3;
+            align-self: flex-end;
+            max-width: 100%;
+            width: 40%;
+            height: auto;
+            margin: 5px;
+            margin-right: 5px;
+        }
+
+        .thirdContent {
+            width: 98;
+            margin: 5px;
+            margin-top: 20px;
+            padding: 5px;
+            height: 465px;
+            columns: 3;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
             border: 1px solid black;
             background-color: rgb(218, 212, 212);
         }
-        .mahcine{ 
-            
-            order: 2; 
-            align-self: flex-end;
-            max-width:100%;
-            width:40%;
-            height:auto;
-            margin:5px;
+
+        .parts {
+            display: flex;
+            flex-direction: column;
+            float: inline-start;
+            width: 60%;
+            order: 2;
+            align-self: center;
+            height: 100%;
+            background-color: rgb(218, 212, 212);
+        }
+
+        .sparePart1 {
+            order: 1;
+            align-self: flex-start;
+            max-width: 100%;
+            width: 40%;
+            height: auto;
+            margin: 5px;
             margin-right: 5px;
         }
-        .sparePart3{
+
+        .sparePart2 {
+            order: 3;
+            align-self: flex-end;
+            max-width: 100%;
+            width: 40%;
+            height: auto;
+            margin: 5px;
+            margin-right: 5px;
+        }
+
+        .fourthContent {
+            width: 98%;
+            margin: 5px;
+            padding: 5px;
+            margin-top: 20px;
+            height: 665px;
+            columns: 2;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            border: 1px solid black;
+            background-color: rgb(218, 212, 212);
+        }
+
+        .mahcine {
+
+            order: 2;
+            align-self: flex-end;
+            max-width: 100%;
+            width: 40%;
+            height: auto;
+            margin: 5px;
+            margin-right: 5px;
+        }
+
+        .sparePart3 {
             display: flex;
             float: inline-start;
-            width:60%;
-            order: 1; 
-            align-self: flex-start; 
-            height:100%;
+            width: 60%;
+            order: 1;
+            align-self: flex-start;
+            height: 100%;
             background-color: blueviolet;
         }
-        .contact_us{
-            width:100%;
-            height:auto;
+
+        .contact_us {
+            width: 100%;
+            height: auto;
             align-items: center;
         }
-        @media (max-width: 800px) {
-            .mainPageBlock{
-                padding:15px;
-                margin:10px;
-            }
-            .firstContent{
-                padding:10px;
-                width:98%;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                height:800px;
-                margin:5px;
-                
-            }
-            .firstContent img{ 
-                position: relative;
-                width:98%;
-                height:auto;
-                margin:5px;
-                
-            }
-            .aboutMe{
-                display: flex;
-                width:98%;
-                height:50%;
-                background-color: rgb(218, 212, 212);
-            }
-            .secondContent{
-                width:98%;
-                margin:5px;
-                margin-top:20px;
-                padding:5px;
-                height:1300px;
-                border: 1px solid black;
-                columns: 3;
-                display:flex;
-                flex-direction: column;
-                align-items:center;
-                justify-content:space-around;
-                background-color: rgb(218, 212, 212);
-                
-            }
-            .devices{
-                display: flex;
-                flex-direction: column;
-                
-                width:98%;
-                
-                align-self:center; 
-                height:100%;
-                background-color: rgb(218, 212, 212);
-            }
-            .brod1{
-                
-                max-width:100%;
-                width:98%;
-                height:auto;
-                margin:5px;
-                margin-right: 5px;
-            }
-            .brod2{
-               
-                max-width:100%;
-                width:98%;
-                height:auto;
-                margin:5px;
-                margin-right: 5px;
-            }
-            .thirdContent{
-                width:98%;
-                margin:5px;
-                margin-top:20px;
-                padding:5px;
-                height:1100px;
-                border: 1px solid black;
-                columns: 3;
-                display:flex;
-                flex-direction: column;
-                align-items:center;
-                justify-content:space-around;
-                background-color: rgb(218, 212, 212);
-            }
-            .parts{
-                display: flex;
-                flex-direction: column;
-                
-                width:98%;
-                
-                align-self:center; 
-                height:100%;
-                background-color: rgb(218, 212, 212);
-            }
-            .sparePart1{
-                max-width:100%;
-                width:98%;
-                height:auto;
-                margin:5px;
-                margin-right: 5px;
-            }
-            .sparePart2{
-                max-width:100%;
-                width:98%;
-                height:auto;
-                margin:5px;
-                margin-right: 5px;
-            }
-            .fourthContent{
-                padding:10px;
-                width:98%;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                height:1300px;
-                margin:5px;
-            }
-            .mahcine{ 
-                
-                position: relative;
-                width:98%;
-                height:auto;
-                margin:5px;
-            }
-            .sparePart3{
-                position: relative;
-                width:98%;
-                height:auto;
-                margin:5px;
-            }
-            .g-recaptcha { 
-                margin: 20px 0; 
-                width: 100%; 
-                max-width: 400px; /* Voit säätää tätä arvoa tarpeen mukaan */
-             }
+
+        .contact_us_first_Block {
+            background-color: #f0f0f0;
+            font-size: 24px;
+            margin: 5px;
+            padding: 5px;
         }
-       
+
+        .contact_us_second_Block {
+            background-color: #f0f0f0;
+            font-size: 24px;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .contact_us_form_Block {
+            background-color: #f0f0f0;
+            width: 97%;
+            font-size: 24px;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .contact_us_name_div {
+            width: 100%;
+            border: 1px solid black;
+            justify-content: center;
+            padding: 2px;
+            margin: 5px;
+        }
+        .contact_us_label{
+            width:90%;
+        }
+        .google_captcha_div{
+            width: 98%;
+            border: 1px solid black;
+            justify-content: center;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        @media (max-width: 800px) {
+            .HeaderImageDiv h1 {
+                font-size: 1.5rem;
+                /* Pienempi fonttikoko tableteille */
+                width: 90%;
+                height: 40%;
+                ;
+                /* Lisää tilaa tekstiä varten */
+            }
+
+            .mainPageBlock {
+                padding: 15px;
+                margin: 10px;
+            }
+
+            .firstContent {
+                padding: 10px;
+                width: 98%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                height: 800px;
+                margin: 5px;
+
+            }
+
+            .firstContent img {
+                position: relative;
+                width: 98%;
+                height: auto;
+                margin: 5px;
+
+            }
+
+            .aboutMe {
+                display: flex;
+                width: 98%;
+                height: 50%;
+                background-color: rgb(218, 212, 212);
+            }
+
+            .secondContent {
+                width: 98%;
+                margin: 5px;
+                margin-top: 20px;
+                padding: 5px;
+                height: 1300px;
+                border: 1px solid black;
+                columns: 3;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                background-color: rgb(218, 212, 212);
+
+            }
+
+            .devices {
+                display: flex;
+                flex-direction: column;
+
+                width: 98%;
+
+                align-self: center;
+                height: 100%;
+                background-color: rgb(218, 212, 212);
+            }
+
+            .brod1 {
+
+                max-width: 100%;
+                width: 98%;
+                height: auto;
+                margin: 5px;
+                margin-right: 5px;
+            }
+
+            .brod2 {
+
+                max-width: 100%;
+                width: 98%;
+                height: auto;
+                margin: 5px;
+                margin-right: 5px;
+            }
+
+            .thirdContent {
+                width: 98%;
+                margin: 5px;
+                margin-top: 20px;
+                padding: 5px;
+                height: 1100px;
+                border: 1px solid black;
+                columns: 3;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                background-color: rgb(218, 212, 212);
+            }
+
+            .parts {
+                display: flex;
+                flex-direction: column;
+
+                width: 98%;
+
+                align-self: center;
+                height: 100%;
+                background-color: rgb(218, 212, 212);
+            }
+
+            .sparePart1 {
+                max-width: 100%;
+                width: 98%;
+                height: auto;
+                margin: 5px;
+                margin-right: 5px;
+            }
+
+            .sparePart2 {
+                max-width: 100%;
+                width: 98%;
+                height: auto;
+                margin: 5px;
+                margin-right: 5px;
+            }
+
+            .fourthContent {
+                padding: 10px;
+                width: 98%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                height: 1300px;
+                margin: 5px;
+            }
+
+            .mahcine {
+
+                position: relative;
+                width: 98%;
+                height: auto;
+                margin: 5px;
+            }
+
+            .sparePart3 {
+                position: relative;
+                width: 98%;
+                height: auto;
+                margin: 5px;
+            }
+
+            .g-recaptcha {
+                margin: 20px 0;
+                width: 100%;
+                max-width: 400px;
+                /* Voit säätää tätä arvoa tarpeen mukaan */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .HeaderImageDiv h1 {
+                font-size: 1.2rem;
+                /* Pienempi fonttikoko mobiililaitteille */
+                width: 95%;
+                /* Lisää tilaa tekstiä varten */
+            }
+        }
     </style>
     <title>Automaatio ja eletroniikka huolto Jouko Mäenpää</title>
 </head>

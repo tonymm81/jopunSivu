@@ -25,4 +25,8 @@ Small companys webpage
 
 ## version 107
 - now the node mailer is working fine and the googles recaptcha is working fine. Lets continue this site developing later when we have published this site.
-- Next we have to buy a domain name and upcloud service to run the webpage. I make some changes on email message sender.
+- Next we have to buy a domain name and upcloud service to run the webpage. I make some changes on email message sender.d
+
+## version 108
+- I have made some style repairs to site. I also make this project root folder order different, so we can use this
+- repo in server. I also fixed the contact us part and I also made some guide, how to configure server side.

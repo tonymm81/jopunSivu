@@ -2,62 +2,94 @@
 
     <div class="contact_us">
         <% if (isEnglish) {%>
-        <a href="/" class="mdl-button mdl-button--raised">takaisin pääsivulle</a>
-        <h1>Ota yhteyttä</h1> 
-        <p><strong>HUOM!!</strong> Tälle sivulle emme tallenna henkilötietoja. 
-            Antamasi nimi ja sähköposti päätyvät henkilökohtaiseen sähköpostiosoitteeseeni. 
-            Ethän laita viestikenttään mitään arkaluontoista tietoa. 
-            Poistamme asiakkaan viestit, kun tapaus on ratkennut tai asiakkaan pyynnöstä, 
-            mutta kuitenkin viimeistään 3 kuukauden kuluttua.
-        </p> <br><br> 
-        <p>Kysy lisää korjauksista ja muista osista, niin autamme parhaan mukaan.</p> 
-        <p>Toki kaikkia tapauksia ei pystytä korjaamaan, mutta kysy rohkeasti lisää!</p>
-        <form action="/send-email" method="POST"> 
-            <label for="name">Nimi:</label> 
-                <input type="text" id="name"
-                name="name" required> <br> 
-                <label for="email">Sähköposti:</label> 
-                <input type="email" id="email"
-                name="email" required> <br> 
-                <label for="message">Viesti:</label> 
-                <textarea id="message" name="message"
-                required></textarea> <br>
-        <div class="g-recaptcha" data-sitekey=<%= sitekey %> required>
+            <a href="/" class="mdl-button mdl-button--raised">takaisin pääsivulle</a>
+            <h1>Ota yhteyttä</h1>
+            <div class="contact_us_first_Block">
+                <p><strong>HUOM!!</strong> Tälle sivulle emme tallenna henkilötietoja.
+                    Antamasi nimi ja sähköposti päätyvät henkilökohtaiseen sähköpostiosoitteeseeni.
+                    Ethän laita viestikenttään mitään arkaluontoista tietoa.
+                    Poistamme asiakkaan viestit, kun tapaus on ratkennut tai asiakkaan pyynnöstä,
+                    mutta kuitenkin viimeistään 3 kuukauden kuluttua.
+                </p>
+            </div>
+            <div class="contact_us_second_Block">
+                <p>Kysy lisää korjauksista ja muista osista, niin autamme parhaan mukaan.</p>
+                <p>Toki kaikkia tapauksia ei pystytä korjaamaan, mutta kysy rohkeasti lisää!</p>
+            </div>
+            <div class="contact_us_form_Block">
+                <div class="contact_us_form_Block">
+                    <form action="/send-email" method="POST">
+                        <div class="contact_us_name_div">
 
-        </div> 
-        <br> 
-        <button type="submit">Lähetä</button>
-        </form>
-        <% }else{ %>
-            <a href="/" class="mdl-button mdl-button--raised">Back to Main Page</a> 
-            <h1>Contact Us</h1> <p><strong>NOTE!!</strong> We do not store personal data on this page. 
-                The name and email you provide will be sent to my personal email address. 
-                Please do not include any sensitive information in the message field.
-                 We delete customer messages once the case is resolved or upon the customer's request,
-                  but no later than 3 months after.
-            </p> 
-            <br>
-            <br> 
-            <p>Ask more about repairs and other parts, and we will help you as best as we can.</p> 
-            <p>Of course, not all cases can be repaired, but feel free to ask for more information!</p>
-        <form action="/send-email" method="POST"> 
-                <label for="name">Name:</label> 
-                    <input type="text" id="name"
-                    name="name" required> <br> 
-                    <label for="email">E mail:</label> 
-                    <input type="email" id="email"
-                    name="email" required> <br> 
-                    <label for="message">Message:</label> 
-                    <textarea id="message" name="message"
-                    required></textarea> <br>
-            <div class="g-recaptcha" data-sitekey=<%= sitekey %> required>
-               
-            </div> 
-            <br> 
-            <button type="submit">Send</button>
-            </form>
-            <% } %>
+                            <label for="name" label-text="Put your name here" style="width:90%;">Kirjoita
+                                nimesi:</label>
+                            <input type="text" id="name" name="name" required class="contact_us_label"> <br>
+                        </div>
+                        <div class="contact_us_name_div">
+                            <label for="email" style="width:90%;">Sähköpostisi:</label>
+                            <input type="email" id="email" name="email" required class="contact_us_label"> <br>
+                        </div>
+                        <div class="contact_us_name_div">
+                            <label for="message">Kirjoita mitä osaa etsit tai mitä haluaisit korjata:</label>
+                            <textarea id="message" name="message" required class="contact_us_label"></textarea> <br>
+                        </div>
+
+                        <div class="google_captcha_div">
+                            <h5>Muista täpätä en ole robotti nappia ennen lähetä napin painamista</h5>
+                            <div class="g-recaptcha" data-sitekey=<%=sitekey %> required>
+
+                            </div>
+
+                            <br>
+                            <button type="submit" styles="font-size:20px width:40%">Lähetä lomake</button>
+                    </form>
+                </div>
+            </div>
+            <% }else{ %>
+                <a href="/" class="mdl-button mdl-button--raised">Back to Main Page</a>
+                <h1>Contact Us</h1>
+                <p>
+                <div class="contact_us_first_Block">
+                    <strong>NOTE!!</strong> We do not store personal data on this page.
+                    The name and email you provide will be sent to my personal email address.
+                    Please do not include any sensitive information in the message field.
+                    We delete customer messages once the case is resolved or upon the customer's request,
+                    but no later than 3 months after.
+                    </p>
+
+                </div>
+                <div class="contact_us_second_Block">
+                    <p>Ask more about repairs and other parts, and we will help you as best as we can.
+                        Of course, not all cases can be repaired, but feel free to ask for more information!</p>
+                </div>
+                <div class="contact_us_form_Block">
+                    <form action="/send-email" method="POST">
+                        <div class="contact_us_name_div">
+
+                            <label for="name" label-text="Put your name here" style="width:90%;">Write your name here:</label>
+                            <input type="text" id="name" name="name" required class="contact_us_label"> <br>
+                        </div>
+                        <div class="contact_us_name_div">
+                            <label for="email" style="width:90%;">  Your e-mail:</label>
+                            <input type="email" id="email" name="email" required class="contact_us_label"> <br>
+                        </div>
+                        <div class="contact_us_name_div">
+                            <label for="message">What kind of part you are looking for or what you want to repair?:</label>
+                            <textarea id="message" name="message" required class="contact_us_label"></textarea> <br>
+                        </div>
+                        <div class="google_captcha_div">
+                            <h5>Remember to do I am not a robot checkbot before you press send button</h5>
+                            <div class="g-recaptcha" data-sitekey=<%=sitekey %> required>
+
+                            </div>
+
+                            <br>
+                            <button type="submit" styles="font-size:20px width:40%">Send</button>
+                    </form>
+                </div>
     </div>
+    <% } %>
+        </div>
 
 
-    <%- include("includes/footer") %>
+        <%- include("includes/footer") %>
