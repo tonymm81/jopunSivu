@@ -22,8 +22,7 @@ app.use(express.urlencoded({extended : true}));
 app.get("/contact", async (req : express.Request, res : express.Response) => {
 
    
-   //let sitekey = "vitun paskaläjä"//process.env.googleCaptchaSiteKey
-   //console.log("tullaanko ohjaukseen", sitekey)
+  
    res.render("sendmail", { isEnglish, sitekey });
 
 });

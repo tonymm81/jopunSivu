@@ -30,3 +30,6 @@ Small companys webpage
 ## version 108
 - I have made some style repairs to site. I also make this project root folder order different, so we can use this
 - repo in server. I also fixed the contact us part and I also made some guide, how to configure server side.
+
+## version 109
+-  created the robots.txt to this site. I also generate the site map to website.

@@ -27,8 +27,6 @@ app.use(express_1.default.static(path_1.default.resolve(__dirname, "public")));
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
 app.get("/contact", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    //let sitekey = "vitun paskaläjä"//process.env.googleCaptchaSiteKey
-    //console.log("tullaanko ohjaukseen", sitekey)
     res.render("sendmail", { isEnglish, sitekey });
 }));
 app.get("/", (req, res) => {
