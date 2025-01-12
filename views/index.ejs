@@ -38,10 +38,6 @@
                     <% if (isEnglish) {%>
                     <h3>laitteita, joita korjaillaan</h3>
                     <p>Brother Prodeerauskoneet</p>
-                    <% } else { %>
-                        <h3>Devices That Are Repaired</h3> 
-                        <p>Brother Embroidery Machines</p>
-                        <% } %>
                     <ul>
                         <li>bas-416</li>
                         <li>bes-1216</li>
@@ -49,7 +45,22 @@
                         <li>bes-960</li>
                         <li>be-1206</li>
                         <li>be-1204 </li>
+                        <li>Sähkösukkuloiden korjaus malleihin: Bas-960 ja Bas-963</li>
                     </ul>
+                    <% } else { %>
+                        <h3>Devices That Are Repaired</h3> 
+                        <p>Brother Embroidery Machines</p>
+                        <ul>
+                            <li>bas-416</li>
+                            <li>bes-1216</li>
+                            <li>bes-1206, 1204</li>
+                            <li>bes-960</li>
+                            <li>be-1206</li>
+                            <li>be-1204 </li>
+                            <li>Repair of electronic shuttles for models: Bas-960 and Bas-963</li>
+                        </ul>
+                        <% } %>
+                  
                 </div>
                     <img src="/images/brodeeraus1.png" alt="Brother BES" class="brod1"/>
                     <img src="/images/brodeeraus2.png" alt="Brother BE" class="brod2"/>
@@ -59,12 +70,14 @@
                     <% if (isEnglish) {%>
                         <h3>Varaosia on joihinkin malleihin</h3>
                         <p>Minulta löytyy ohjauskortteja esimerkiksi BE-1204 ja BE-1206
-                        malleihin ja esimerkiksi ehjiä paneeleita ja muita kortteja löytyy muihinkin 
-                        kone malleihin.
+                        malleihin ja esimerkiksi muita kortteja löytyy muihinkin 
+                        kone malleihin. Bas 960 ja 963 sähkösukkuloita löytyy varaosina. 
+                       
                         <% } else { %>
                             <h3>Spare Parts for Some Models</h3> <p>I have control boards for models 
                                 such as BE-1204 and BE-1206, and 
-                                I also have intact panels and other boards for other machine models. 
+                                I also have other boards for other machine models. 
+                                Spare parts for electronic shuttles for models Bas-960 and Bas-963 are available.
                             </p>    
                     </p><% } %>
                 </div>

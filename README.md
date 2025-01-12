@@ -33,3 +33,6 @@ Small companys webpage
 
 ## version 109
 -  created the robots.txt to this site. I also generate the site map to website.
+
+## version 110
+- I made some changes to site like header text and title is also in English. 

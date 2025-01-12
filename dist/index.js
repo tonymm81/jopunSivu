@@ -24,6 +24,7 @@ let isEnglish = false;
 let sitekey = process.env.googleCaptchaSiteKey;
 app.set("view engine", "ejs");
 app.use(express_1.default.static(path_1.default.resolve(__dirname, "public")));
+app.use(express_1.default.static('public'));
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
 app.get("/contact", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
@@ -46,7 +47,7 @@ app.post("/send-email", (req, res) => __awaiter(void 0, void 0, void 0, function
         const data = yield response.json();
         console.log("vastaus", data);
         if (data.success === false) {
-            return res.render("vahvistus", { viesti: "reCAPTCHA vahvistus epäonnistui. Yritä uudelleen. Please do the i am not robot again " });
+            return res.render("vahvistus", { isEnglish: isEnglish, viesti: "reCAPTCHA vahvistus epäonnistui. Yritä uudelleen. Please do the i am not robot again " });
         }
         console.log(process.env.Google_email, process.env.Google_Password);
         const transporter = nodemailer_1.default.createTransport({ host: "smtp.gmail.com",
@@ -56,11 +57,11 @@ app.post("/send-email", (req, res) => __awaiter(void 0, void 0, void 0, function
         const mailOptions = { from: email, to: process.env.hotmailAccount,
             subject: `Yhteydenotto: ${name}`, text: ` viesti ${message} henkilöltä osoitteesta ${email}` };
         yield transporter.sendMail(mailOptions);
-        res.render("vahvistus", { viesti: "Sähköposti lähetetty onnistuneesti! The mail is sended!" });
+        res.render("vahvistus", { isEnglish: isEnglish, viesti: "Sähköposti lähetetty onnistuneesti! The mail is sended!" });
     }
     catch (error) {
         console.error("Virhe sähköpostin lähetyksessä:", error);
-        res.render("vahvistus", { viesti: "Virhe sähköpostin lähetyksessä. There happend an error in sending a message" });
+        res.render("vahvistus", { isEnglish: isEnglish, viesti: "Virhe sähköpostin lähetyksessä. There happend an error in sending a message" });
     }
 }));
 app.listen(portti, () => {

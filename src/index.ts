@@ -16,6 +16,7 @@ let sitekey = process.env.googleCaptchaSiteKey
 
 app.set("view engine", "ejs");
 app.use(express.static(path.resolve(__dirname, "public")));
+app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
 
@@ -48,7 +49,7 @@ app.post("/send-email", async (req: express.Request, res: express.Response) => {
         const data = await response.json(); 
         console.log("vastaus", data)
         if (data.success === false) {
-            return res.render("vahvistus", { viesti: "reCAPTCHA vahvistus epäonnistui. Yritä uudelleen. Please do the i am not robot again "}); 
+            return res.render("vahvistus", { isEnglish : isEnglish, viesti: "reCAPTCHA vahvistus epäonnistui. Yritä uudelleen. Please do the i am not robot again "}); 
         } 
         console.log(process.env.Google_email, process.env.Google_Password)
 
@@ -61,10 +62,10 @@ app.post("/send-email", async (req: express.Request, res: express.Response) => {
             subject: `Yhteydenotto: ${name}`, text: ` viesti ${message} henkilöltä osoitteesta ${email}` }; 
 
         await transporter.sendMail(mailOptions); 
-        res.render("vahvistus", {viesti: "Sähköposti lähetetty onnistuneesti! The mail is sended!"}); 
+        res.render("vahvistus", { isEnglish : isEnglish, viesti: "Sähköposti lähetetty onnistuneesti! The mail is sended!"}); 
     } catch (error) { 
         console.error("Virhe sähköpostin lähetyksessä:", error); 
-        res.render("vahvistus", {viesti: "Virhe sähköpostin lähetyksessä. There happend an error in sending a message"}); } 
+        res.render("vahvistus", {isEnglish : isEnglish, viesti: "Virhe sähköpostin lähetyksessä. There happend an error in sending a message"}); } 
     
     });
 

@@ -521,7 +521,11 @@
             }
         }
     </style>
+    <% if (isEnglish) {%>
     <title>Automaatio ja eletroniikka huolto Jouko Mäenpää</title>
+    <% } else{ %>
+    <title>Automation and Electronics Service Jouko Mäenpää</title>
+    <% } %>
 </head>
 
 <body>
@@ -529,6 +533,10 @@
     <div class="mdl-layout">
         <div class="HeaderImageDiv">
             <img src="/images/rajattuHeader.png" alt="header img">
+            <% if (isEnglish) {%>
             <h1>Automaatio ja eletroniikka huolto Jouko Mäenpää</h1>
+            <% } else { %>
+            <h1>Automation and Electronics Service Jouko Mäenpää</h1>
+            <% } %>
             </img>
         </div>
