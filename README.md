@@ -36,3 +36,6 @@ Small companys webpage
 
 ## version 110
 - I made some changes to site like header text and title is also in English. 
+
+## version 111
+- making some node updates to site.
