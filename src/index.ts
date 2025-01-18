@@ -12,7 +12,7 @@ dotenv.config();
 const portti : number =  Number(process.env.SitePort) ;
 
 let isEnglish = false;
-let sitekey = process.env.googleCaptchaSiteKey
+let sitekey = process.env.googleCaptchaSiteKey;
 
 app.set("view engine", "ejs");
 app.use(express.static(path.resolve(__dirname, "public")));
@@ -23,8 +23,7 @@ app.use(express.urlencoded({extended : true}));
 app.get("/contact", async (req : express.Request, res : express.Response) => {
 
    
-  
-   res.render("sendmail", { isEnglish, sitekey });
+   res.render("sendmail", { isEnglish, sitekey  });
 
 });
 

@@ -39,3 +39,6 @@ Small companys webpage
 
 ## version 111
 - making some node updates to site.
+
+## version 112
+- I made some updates to site. Now the send message button will stay disabled before user has done successed google captcha. Then it activites and user can send a message.
