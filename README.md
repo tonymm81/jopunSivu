@@ -45,3 +45,6 @@ Small companys webpage
 
 ## version 113
 - I updated some text to site and also i update the server opating system.
+
+## version 114
+- I update the node moduls and also fixed some grafics side. I also update the server linux system. 
