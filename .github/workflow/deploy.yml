@@ -3,7 +3,7 @@ name: Deploy Node EJS Site
 on:
   push:
     branches:
-      - Publish
+      - Published
 
 jobs:
   deploy:
