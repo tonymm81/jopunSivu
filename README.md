@@ -51,3 +51,6 @@ Small companys webpage
 
 ## version 115
 - I update the server linux and also fix one cybersecurity what was related to googles stylesheet. Earlier the browser gives error about this. If you try to get stylesheets with http get command and your site uses https it gives an error.
+
+## version 116
+- building the github actions
