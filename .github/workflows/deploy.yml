@@ -30,7 +30,7 @@ jobs:
           key: ${{ secrets.SERVER_PRIVATE_KEY }}
           port: 22
           script: |
-            cd /website || exit 1
+            cd /root/website || exit 1
             # Suoritetaan apt-get päivitykset ilman käyttäjän väliintuloa
             sudo apt-get update -y
             sudo apt-get upgrade -y
