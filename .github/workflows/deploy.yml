@@ -35,10 +35,10 @@ jobs:
             sudo apt-get update -y
             sudo apt-get upgrade -y
             pm2 stop ecosystem.config.js --env production
-            rsync -av /root/GitHubTemp/dist/ /root/website/
-            rsync -av /root/GitHubTemp/src/ /root/website/
-            rsync -av /root/GitHubTemp/views/ /root/website/
-            rsync -av /root/GitHubTemp/public/ /root/website/
+            rsync -av /root/GitHubTemp/dist/ /root/website/dist/
+            rsync -av /root/GitHubTemp/src/ /root/website/src/
+            rsync -av /root/GitHubTemp/views/ /root/website/views/
+            rsync -av /root/GitHubTemp/public/ /root/website/public/
             cp -f /root/GitHubTemp/index.ts /root/website/
             cp -f /root/GitHubTemp/package.json /root/website/
             npm install
