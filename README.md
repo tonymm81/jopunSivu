@@ -54,3 +54,6 @@ Small companys webpage
 
 ## version 116
 - building the github actions. and testing it
+
+## VERSION 117
+- There is some repairing to mobile view and i also repaired the missing div error

@@ -62,9 +62,9 @@
                             <li>be-1204 </li>
                             <li>Repair of electronic shuttles for models: Bas-960 and Bas-963</li>
                         </ul>
-                    </div>
+                    
                         <% } %>
-                  
+                        </div>
                 </div>
                     <img src="/images/brodeeraus1.png" alt="Brother BES" class="brod1"/>
                     <img src="/images/brodeeraus2.png" alt="Brother BE" class="brod2"/>
@@ -78,16 +78,18 @@
                         malleihin ja esimerkiksi muita kortteja löytyy muihinkin 
                         kone malleihin. Bas 960 ja 963 sähkösukkuloita löytyy varaosina. 
                         Be-1204 ja Be-1206 -mallien ohjauskortteja on paranneltu langankatkaisuun liittyen.
-                       
+                       </p> 
                         <% } else { %>
-                            <h3>Spare Parts for Some Models</h3> <p>I have control boards for models 
+                            <h3>Spare Parts for Some Models</h3>
+                             <p>I have control boards for models 
                                 such as BE-1204 and BE-1206, and 
                                 I also have other boards for other machine models. 
                                 Spare parts for electronic shuttles for models Bas-960 and Bas-963 are available.
                                 The driver boards of the Be-1204 and Be-1206 models have been improved regarding thread cutting.
-                            </p>    
-                    </p><% } %>
-                </div>
+                            </p>   
+                            
+                    <% } %>
+                        </div> 
                 </div>
                 <img src="/images/sparepart1.png" alt="Brother part" class="sparePart1"/>
                 <img src="/images/sparepart2.png" alt="Brother parts" class="sparePart2"/>
@@ -97,7 +99,7 @@
                 <img src="/images/spareparts3.png" alt="Brother machine" class="sparePart3"/>
             </div>
 
-        <div class="buttonDiv">
+        <div class="buttonDivBottom">
             <% if (isEnglish) {%>
                 <a href="/set-language/fi" class="mdl-button mdl-button--raised buttons">In English</a>
                 <a href="/contact" class="mdl-button mdl-button--raised" >Ota yhteyttä</a>
@@ -107,5 +109,6 @@
                 <% } %>
         </div>
 </div>
+
 <%- include("includes/footer") %>
    

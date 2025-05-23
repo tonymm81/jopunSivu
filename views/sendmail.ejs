@@ -2,7 +2,7 @@
 
     <div class="contact_us">
         <% if (isEnglish) {%>
-            <a href="/" class="mdl-button mdl-button--raised">takaisin pääsivulle</a>
+            <a href="/" class="mdl-button mdl-button--raised" style="font-size:14px;">takaisin pääsivulle</a>
             <h1>Ota yhteyttä</h1>
             <div class="contact_us_first_Block">
                 <p><strong>HUOM!!</strong> Tälle sivulle emme tallenna henkilötietoja.
@@ -29,7 +29,7 @@
                             <label for="email" style="width:90%;">Sähköpostisi:</label>
                             <input type="email" id="email" name="email" required class="contact_us_label"> <br>
                         </div>
-                        <div class="contact_us_name_div">
+                        <div class="contact_us_description_div" multile="true">
                             <label for="message">Kirjoita mitä osaa etsit tai mitä haluaisit korjata:</label>
                             <textarea id="message" name="message" required class="contact_us_label"></textarea> <br>
                         </div>
@@ -40,7 +40,7 @@
                                 required>
 
                             </div>
-                        </div> <button id="submit-button" disabled>Lähetä viesti</button>
+                        </div> <button id="submit-button" class="mdl-button mdl-button--raised" disabled>Lähetä viesti</button>
                         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
                         <script> function enableSubmitButton() { document.getElementById('submit-button').disabled = false; }
 
@@ -49,10 +49,11 @@
                 </div>
             </div>
             <% }else{ %>
-                <a href="/" class="mdl-button mdl-button--raised">Back to Main Page</a>
+                <a href="/" class="mdl-button mdl-button--raised" style="font-size:14px;">Back to Main Page</a>
                 <h1>Contact Us</h1>
-                <p>
                 <div class="contact_us_first_Block">
+                <p>
+                
                     <strong>NOTE!!</strong> We do not store personal data on this page.
                     The name and email you provide will be sent to my personal email address.
                     Please do not include any sensitive information in the message field.
@@ -74,10 +75,10 @@
                             <input type="text" id="name" name="name" required class="contact_us_label"> <br>
                         </div>
                         <div class="contact_us_name_div">
-                            <label for="email" style="width:90%;"> Your e-mail:</label>
+                            <label for="email" style="width:90%; height:100%;"> Your e-mail:</label>
                             <input type="email" id="email" name="email" required class="contact_us_label"> <br>
                         </div>
-                        <div class="contact_us_name_div">
+                        <div class="contact_us_description_div">
                             <label for="message">What kind of part you are looking for or what you want to
                                 repair?:</label>
                             <textarea id="message" name="message" required class="contact_us_label"></textarea> <br>
@@ -88,16 +89,16 @@
                                 required>
 
                             </div>
-                        </div> <button id="submit-button" disabled>Send message</button>
+                        </div> <button id="submit-button" class="mdl-button mdl-button--raised" disabled>Send message</button>
                         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
                         <script> function enableSubmitButton() { document.getElementById('submit-button').disabled = false; }
 
                         </script>
                     </form>
                 </div>
-    </div>
+    
     <% } %>
-        </div>
+</div>
 
 
         <%- include("includes/footer") %>
