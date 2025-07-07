@@ -14,7 +14,7 @@
     <style>
         html {
             font-size: 16px;
-            
+
         }
 
         body {
@@ -151,7 +151,8 @@
             margin: 5px;
             padding: 5px;
         }
-        .buttonDivBottom{
+
+        .buttonDivBottom {
             align-items: center;
             display: flex;
             flex-direction: row;
@@ -346,13 +347,13 @@
             margin: 5px;
             padding: 5px;
             text-align: center;
-           
+
         }
 
         .contact_us_second_Block {
             background-color: #f0f0f0;
             font-size: 1.4rem;
-            
+
             font-style: italic;
             margin: 5px;
             padding: 10px;
@@ -374,8 +375,9 @@
             padding: 5px;
             margin: 5px;
             height: 50px;
-            
+
         }
+
         .contact_us_description_div {
             width: 100%;
             border: 1px solid black;
@@ -383,7 +385,7 @@
             padding: 5px;
             margin: 5px;
             height: 150px;
-            
+
         }
 
         .contact_us_label {
@@ -415,11 +417,17 @@
         @media (max-width: 800px) {
             .HeaderImageDiv h1 {
                 font-size: 1.5rem;
-                /* Pienempi fonttikoko tableteille */
                 width: 90%;
                 height: 40%;
-                ;
-                /* Lisää tilaa tekstiä varten */
+            }
+            body{
+                width:100% !important;
+            }
+            
+            .Maindiv {
+                max-width: 700px !important;
+                margin: 0 auto;
+                width: 100% !important;
             }
 
             .mainPageBlock {
@@ -569,16 +577,105 @@
                 margin: 20px 0;
                 width: 100%;
                 max-width: 400px;
-                /* Voit säätää tätä arvoa tarpeen mukaan */
+            }
+
+            .contactHeader {
+                width: 100%;
+                justify-content: space-between;
+                display: block;
+                margin-left: 15%;
+            }
+
+            .contact_us {
+                display: block;
+                max-width: 500px;
+                width: 100%;
+                height: auto;
+                justify-content: center;
+                
+            }
+
+            .contact_us_first_Block {
+                background-color: #f0f0f0;
+                font-size: 1.5rem;
+                margin: 5px;
+                padding: 5px;
+                text-align: center;
+
+            }
+
+            .contact_us_second_Block {
+                background-color: #f0f0f0;
+                font-size: 1.4rem;
+                font-style: italic;
+                margin: 5px;
+                padding: 10px;
+                text-align: center;
+            }
+
+            .contact_us_form_Block {
+                background-color: #f0f0f0;
+                width: 95%;
+                font-size: 24px;
+                margin: 5px;
+                padding: 5px;
+            }
+
+            .contact_us_name_div {
+                width: 95%;
+                border: 1px solid black;
+                justify-content: center;
+                padding: 5px;
+                margin: 5px;
+                height: 100px;
+
+            }
+
+            .contact_us_description_div {
+                width: 95%;
+                border: 1px solid black;
+                justify-content: center;
+                padding: 5px;
+                margin: 5px;
+                height: 150px;
+
+            }
+
+            .contact_us_label {
+                width: 98%;
+                height: 40px;
+                font-size: 18px;
+            }
+
+            .button_container {
+                display: flex;
+                justify-content: center;
+                margin-top: 10px;
+                width: 95%;
+            }
+
+            .contactUsButton {
+                width: 100%;
+                align-items: center;
+                margin-left: 15%;
+            }
+
+            .google_captcha_div {
+                width: 93%;
+
+            }
+
+            .mdl-button {
+                width: 150px;
+                height: 50px;
+                font-size: 1rem;
             }
         }
 
         @media (max-width: 480px) {
             .HeaderImageDiv h1 {
                 font-size: 1.2rem;
-                /* Pienempi fonttikoko mobiililaitteille */
                 width: 95%;
-                /* Lisää tilaa tekstiä varten */
             }
         }
     </style>

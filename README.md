@@ -57,3 +57,6 @@ Small companys webpage
 
 ## VERSION 117
 - There is some repairing to mobile view and i also repaired the missing div error
+
+## version 118
+- I repair littlebit the contact us page mobile view. I gow the text fields bigger and also check that elements wont over scale.
