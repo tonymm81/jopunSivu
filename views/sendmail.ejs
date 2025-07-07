@@ -2,8 +2,8 @@
 
     <div class="contact_us">
         <% if (isEnglish) {%>
-            <a href="/" class="mdl-button mdl-button--raised" style="font-size:14px;">takaisin pääsivulle</a>
-            <h1>Ota yhteyttä</h1>
+            <div class="contactUsButton"><a href="/" class="mdl-button mdl-button--raised" style="font-size:14px;">takaisin pääsivulle</a></div>
+            <div class="contactHeader"><h1>Ota yhteyttä</h1></div>
             <div class="contact_us_first_Block">
                 <p><strong>HUOM!!</strong> Tälle sivulle emme tallenna henkilötietoja.
                     Antamasi nimi ja sähköposti päätyvät henkilökohtaiseen sähköpostiosoitteeseeni.
@@ -21,7 +21,7 @@
                     <form action="/send-email" method="POST">
                         <div class="contact_us_name_div">
 
-                            <label for="name" label-text="Put your name here" style="width:90%;">Kirjoita
+                            <label for="name" label-text="Put your name here" style="width:95%;">Kirjoita
                                 nimesi:</label>
                             <input type="text" id="name" name="name" required class="contact_us_label"> <br>
                         </div>
@@ -49,8 +49,8 @@
                 </div>
             </div>
             <% }else{ %>
-                <a href="/" class="mdl-button mdl-button--raised" style="font-size:14px;">Back to Main Page</a>
-                <h1>Contact Us</h1>
+                <div class="contactUsButton"><a href="/" class="mdl-button mdl-button--raised" style="font-size:14px;">Back to Main Page</a></div>
+                <div class="contactHeader"><h1>Contact Us</h1></div>
                 <div class="contact_us_first_Block">
                 <p>
                 
@@ -70,7 +70,7 @@
                     <form action="/send-email" method="POST">
                         <div class="contact_us_name_div">
 
-                            <label for="name" label-text="Put your name here" style="width:90%;">Write your name
+                            <label for="name" label-text="Put your name here" style="width:95%; height:40px">Write your name
                                 here:</label>
                             <input type="text" id="name" name="name" required class="contact_us_label"> <br>
                         </div>
