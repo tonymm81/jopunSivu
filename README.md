@@ -60,3 +60,6 @@ Small companys webpage
 
 ## version 118
 - I repair littlebit the contact us page mobile view. I gow the text fields bigger and also check that elements wont over scale.
+
+## version 119
+- I repaired the node modules so the site is safe again, lets publish this version
