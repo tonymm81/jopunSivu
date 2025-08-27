@@ -12,8 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/sitemap-generator": "^8.5.5",
-    "async": ">=3.2.6",
+    "@types/sitemap-generator": "^8.5.1",
     "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
     "express": "^4.21.2",
@@ -35,6 +34,15 @@
     "typescript": "^5.8.2"
   },
   "overrides": {
-  "url-parse": "^1.5.10"
-}
+   "sitemap-generator": {
+    "url-parse": "1.5.10",
+    "async": "3.2.6",
+    "lodash": "4.17.21"
+  }
+,
+  "css-select": {
+    "nth-check": "2.1.1"
+  }
+
+  }
 }
