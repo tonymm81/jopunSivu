@@ -28,6 +28,7 @@ app.use(express_1.default.static('public'));
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
 app.get("/contact", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    //res.render("vahvistus", { isEnglish: isEnglish, viesti: "Sähköposti lähetetty onnistuneesti! The mail is sended!" });//delete this
     res.render("sendmail", { isEnglish, sitekey });
 }));
 app.get("/", (req, res) => {
@@ -49,7 +50,7 @@ app.post("/send-email", (req, res) => __awaiter(void 0, void 0, void 0, function
         if (data.success === false) {
             return res.render("vahvistus", { isEnglish: isEnglish, viesti: "reCAPTCHA vahvistus epäonnistui. Yritä uudelleen. Please do the i am not robot again " });
         }
-        console.log(process.env.Google_email, process.env.Google_Password);
+        //console.log(process.env.Google_email, process.env.Google_Password)
         const transporter = nodemailer_1.default.createTransport({
             host: "smtp.gmail.com",
             port: 465,
