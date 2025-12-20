@@ -5,23 +5,21 @@
   "main": "index.ts",
   "scripts": {
     "start": "node dist/index.js",
-    "build": "tsc && ts-node GenerateSitemap.ts",
-    "dev": "ts-node src/index.ts"
+    "build": "tsc",
+    "dev": "nodemon --watch src --exec ts-node src/index.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/sitemap-generator": "^8.5.1",
     "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
     "express": "^4.21.2",
     "lodash": ">=4.17.21",
     "node-fetch": "^2.7.0",
-    "nodemailer": "^6.10.0",
+    "nodemailer": "^7.0.11",
     "nth-check": ">=2.1.1",
     "simple-update-notifier": "^2.0.0",
-    "sitemap-generator": "^8.5.1",
     "url-parse": "^1.5.10"
   },
   "devDependencies": {
@@ -33,16 +31,9 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.8.2"
   },
-  "overrides": {
-   "sitemap-generator": {
-    "url-parse": "1.5.10",
-    "async": "3.2.6",
-    "lodash": "4.17.21"
-  }
-,
-  "css-select": {
-    "nth-check": "2.1.1"
+ 
+    "css-select": {
+      "nth-check": "2.1.1"
+    }
   }
 
-  }
-}

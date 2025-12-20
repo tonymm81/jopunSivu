@@ -62,4 +62,13 @@ Small companys webpage
 - I repair littlebit the contact us page mobile view. I gow the text fields bigger and also check that elements wont over scale.
 
 ## version 119
-- I repaired the node modules so the site is safe again, lets publish this version
+- I repaired the node modules so the site is safe again, lets publish this version.
+
+## version 120
+- I update the node modudes and also remove the site map generator, because this site is not changing so often. 
+- Node mailer updated also.
+
+### to do for next version
+- Update the node packages -> Done in version 120
+- Add the part number table to site.
+- update the server linux -> Done in version 120

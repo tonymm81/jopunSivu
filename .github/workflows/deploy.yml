@@ -41,6 +41,6 @@ jobs:
             rsync -av /root/GitHubTemp/public/ /root/website/public/
             cp -f /root/GitHubTemp/index.ts /root/website/
             cp -f /root/GitHubTemp/package.json /root/website/
-            npm install
+            npm ci
             npm audit fix
             pm2 start ecosystem.config.js --env production
