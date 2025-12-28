@@ -71,4 +71,5 @@ Small companys webpage
 ### to do for next version
 - Update the node packages -> Done in version 120
 - Add the part number table to site.
+- change the pictures
 - update the server linux -> Done in version 120
