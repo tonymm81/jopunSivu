@@ -71,8 +71,5 @@ Small companys webpage
 ## version 121
 - Security updates and fixing the buttons
 
-### to do for next version
-- Update the node packages -> Done in version 120
-- Add the part number table to site.
-- change the pictures
-- update the server linux -> Done in version 120
+## version 122
+- Security update. Adding new content to webp page. Also modified site style. 
