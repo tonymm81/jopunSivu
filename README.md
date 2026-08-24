@@ -72,4 +72,7 @@ Small companys webpage
 - Security updates and fixing the buttons
 
 ## version 122
-- Security update. Adding new content to webp page. Also modified site style. 
+- Security update. Adding new content to web page. Also modified site style. 
+
+## version 123
+- Security update. Adding also some content to web site.
