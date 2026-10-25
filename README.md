@@ -76,3 +76,6 @@ Small companys webpage
 
 ## version 123
 - Security update. Adding also some content to web site.
+
+## version 124
+- Security update.

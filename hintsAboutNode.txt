@@ -1,0 +1,8 @@
+DATE=$(date -d "14 days ago" +%Y-%m-%d)
+pkg="body-parser"
+npm view "$pkg" time --json | \
+  python3 -c "import sys, json, datetime; t=json.load(sys.stdin); d=datetime.date.fromisoformat('$DATE'); vs=[(v,datetime.date.fromisoformat(t[v][:10])) for v in t if v!='created' and v!='modified']; vs=[v for v in vs if v[1] <= d]; print(sorted(vs, key=lambda x:x[1])[-1][0] if vs else '')"
+
+
+cutoff=$(date -I -d "14 days ago")
+npm view braces time --json | python3 pick_version_by_age.py "$(date -I -d '14 days ago')"
